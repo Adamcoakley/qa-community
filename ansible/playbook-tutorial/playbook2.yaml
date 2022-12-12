@@ -1,0 +1,12 @@
+- hosts: localhost
+  connection: local
+  become: true
+  tasks:
+  # Task 1: uninstall nginx
+  - name: uninstall nginx
+    apt:
+      name: nginx
+      state: absent
+      update_cache: true  
+      # make the install fail if the update cache time is bigger than 1.
+      cache_valid_time: 1000 
