@@ -14,13 +14,14 @@
       src: nginx.conf
       dest: /etc/nginx/nginx.conf
     register: nginx_config
+    failed_when: src == dest
   # Task 3: restart nginx to take in the new changes
   - name: Restart nginx if needed
     service:
       name: nginx
       state: restarted
     when: nginx_config.changed == true
-    # Task 3: show the information from the copy task (task 2 + 3)
+  # Task 4: show the information from the copy task (task 2 + 3)
   - name: Display information from the copy task
     debug: 
       msg: "{{ nginx_config }}"
