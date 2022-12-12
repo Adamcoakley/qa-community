@@ -11,9 +11,9 @@
       update_cache: true  
   # Task 2: stop nginx services
   - name: "Stop Nginx Services"
-      service:
-        name: nginx
-        state: stopped
+    service:
+      name: nginx
+      state: stopped
   # Task 3: uninstall packages 
   - name: "Uninstall packages"
     apt:
