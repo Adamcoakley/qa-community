@@ -8,9 +8,10 @@
       name: nginx
       state: present
       update_cache: true  
-      # make the install fail if the update cache time is bigger than 1.
+    # make the install fail if the update cache time is bigger than 1.
     register: nginx_cache_time
     failed_when: nginx_cache_time.cache_update_time > 1
+  # prints the json object in the terminal (task 1)
   - name: nginx cache time debug 
     debug:
       var: nginx_cache_time
