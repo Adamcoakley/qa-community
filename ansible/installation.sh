@@ -5,6 +5,7 @@ mkdir -p ~/.local/bin
 echo 'PATH=$PATH:~/.local/bin' >> ~/.bashrc
 source ~/.bashrc
 ## install pip3
+sudo apt-get update
 sudo apt install python3-pip -y
 ## install ansible with pip3
 pip3 install --user ansible
