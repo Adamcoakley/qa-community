@@ -9,7 +9,7 @@
       state: present
       update_cache: true  
       # make the install fail if the update cache time is bigger than 1.
-
+      cache_valid_time: 1000
   # Task 2: copy our nginx.conf file to the relevant place
   - name: Copy nginx file over
     copy:

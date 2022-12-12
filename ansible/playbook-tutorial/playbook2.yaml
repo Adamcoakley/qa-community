@@ -1,3 +1,4 @@
+# a playbook used to uninstall nginx
 - hosts: localhost
   connection: local
   become: true
@@ -8,3 +9,14 @@
       name: nginx
       state: absent
       update_cache: true  
+  # Task 2: stop nginx services
+  - name: "Stop Nginx Services"
+      service:
+        name: nginx
+        state: stopped
+  # Task 3: uninstall packages 
+  - name: "Uninstall packages"
+    apt:
+      name: nginx
+      state: absent
+      autoremove: yes
