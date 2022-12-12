@@ -20,3 +20,7 @@
       name: nginx
       state: restarted
     when: nginx_config.changed == true
+    # Task 3: show the information from the copy task (task 2 + 3)
+  - name: Display information from the copy task
+    debug: 
+      msg: "{{ nginx_config }}"
