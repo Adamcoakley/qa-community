@@ -1,13 +1,5 @@
 #! /bin/bash
-
-# make sure ~/.local/bin exists and is on your PATH
-mkdir -p ~/.local/bin
-echo 'PATH=$PATH:~/.local/bin' >> ~/.bashrc
-source ~/.bashrc
-## install pip3
-sudo apt-get update
-sudo apt install python3-pip -y
-## install ansible with pip3
-pip3 install --user ansible
-# check that ansible has been installed
-ansible --version
+sudo apt update
+sudo apt install software-properties-common
+sudo apt-add-repository --yes --update ppa:ansible/ansible
+sudo apt install ansible
