@@ -9,14 +9,14 @@
       state: present
       update_cache: true  
       # make the install fail if the update cache time is bigger than 1.
-      
+
   # Task 2: copy our nginx.conf file to the relevant place
   - name: Copy nginx file over
     copy:
       src: nginx.conf
       dest: /etc/nginx/nginx.conf
     register: nginx_config
-    failed_when: src == dest
+    failed_when: nginx_config.diff.after.path == nginx_config.diff.before.path
   # Task 3: restart nginx to take in the new changes
   - name: Restart nginx if needed
     service:
