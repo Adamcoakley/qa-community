@@ -9,7 +9,7 @@
   # Task 1: Create an empty file
   - name: Create an empty file
     copy:
-      dest: "/files/file.txt"
+      dest: "/home/file.txt"
       content: |
         {{ip_address}}
     
