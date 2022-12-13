@@ -1,0 +1,13 @@
+# Exercise: Create a playbook that will clone down a specific Git repo.
+
+- hosts: localhost
+  connection: local
+  become: true
+  tasks:
+  # Task 1: Clone a specific repo
+  - name: clone repo
+    git:
+      repo: https://github.com/Adamcoakley/budget-app.git
+      dest: /home/ubuntu/adam
+      clone: yes
+      update: yes

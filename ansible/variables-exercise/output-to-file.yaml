@@ -1,0 +1,11 @@
+# Exercise: Create a playbook that takes the IP of your host and creates a file containing that IP
+
+- hosts: localhost
+  connection: local
+  become: true
+  tasks:
+  # Task 1: Get the host IP address
+  - name: Get host IP
+    debug: 
+      msg: "{{ lookup('dig', ansible_host) }}" 
+    
