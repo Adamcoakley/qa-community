@@ -1,0 +1,4 @@
+all:
+  hosts:
+    # Private IP: 172.31.44.174
+    ec2-172-31-44-174.eu-west-1.compute.amazonaws.com:
