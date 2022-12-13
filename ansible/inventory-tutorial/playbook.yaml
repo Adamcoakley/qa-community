@@ -1,0 +1,10 @@
+- hosts: test
+  tasks:
+  # Task 1: Ping another machine
+  - name: "Ping {{ inventory_hostname }}"
+    ping:
+    register: ping_info
+  # Task 2: Show ping info in terminal
+  - name: "Show ping_info in console"
+    debug:
+      msg: "{{ ping_info }}"
