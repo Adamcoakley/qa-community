@@ -1,10 +1,9 @@
 # QA Community
-This repository holds the exercises I completed during weeks 7 to 10 of my training with AMS and QA Community. The overall training was scheduled to be 14 weeks with the goal of joining Deloitte as a Cloud Associate. 
+This repository holds the exercises I completed during weeks 7 to 10 of my training with AMS and QA Community.
 
 ## 🌐 Website Links:
 * [AMS' Website](https://www.weareams.com)
 * [QA's Website](https://www.qa.com)
-* [Deloitte's Website](https://www2.deloitte.com/ie/en.html)
 
 ## 💻 Technology Stack:
 <p>A list of the technologies we used during weeks 7 to 10. </p>
