@@ -4,7 +4,7 @@
   connection: local
   become: true
   vars:
-    ip_address: "{{ ansible_facts[ansible_all_ipv4_addresses][0] }}"
+    ip_address: "{{ ansible_facts[ansible_all_ipv4_addresses] }}"
   tasks:
   # Task 1: Create an empty file
   - name: Create an empty file
