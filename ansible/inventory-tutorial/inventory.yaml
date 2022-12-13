@@ -2,7 +2,7 @@ all:
   children:
     test:
       hosts:
-        ec2-34-352-199-83.eu-west-1.compute.amazonaws.com:
+        ec2-34-252-199-83.eu-west-1.compute.amazonaws.com:
         ec2-3-252-187-19.eu-west-1.compute.amazonaws.com:
       vars:
         ansible_user: ubuntu
