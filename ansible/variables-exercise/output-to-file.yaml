@@ -3,9 +3,14 @@
 - hosts: localhost
   connection: local
   become: true
+  vars:
+    ip_address: "{{inventory_hostname}}"
   tasks:
-  # Task 1: Get the host IP address
-  - name: Print IP Address
-    debug: 
-      var: ansible_facts["ansible_all_ipv4_addresses"][0]
+  # Task 1: Create an empty file
+  - name: Create an empty file
+    copy:
+      dest: "/files/file.txt"
+      content: |
+        {{ip_address}}
+    
     
