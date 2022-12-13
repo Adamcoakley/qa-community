@@ -1,21 +1,27 @@
----
 - hosts: all
   become: true
   tasks:
+  # Task 1: Install nginx
   - name: Install NGINX
     apt:
       name: nginx
       state: latest
       update_cache: true
+  # Task 2: Start nginx
   - name: Start NGINX Service
     service:
       name: nginx
       state: started
+  # Task 3: Add nginx config file to destination
   - name: Add nginx conf
-    copy:
-      src: nginx.conf
+    template:                          
+      src: "{{ path_to_nginx_conf }}"  # Change this line to a variable
       dest: /etc/nginx/nginx.conf
-  - name: Restart nginx
-    service: 
-      name: nginx
-      state: restarted
+    # notify the handler below
+    notify: Restart nginx
+  # Handler: Restart nginx when the config file is moved to dest
+  handlers:                           
+  - name: "Restart nginx"              
+    service:                           
+      name: "nginx"                    
+      state: "restarted"
