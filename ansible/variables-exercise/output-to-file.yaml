@@ -7,5 +7,5 @@
   # Task 1: Get the host IP address
   - name: Print IP Address
     debug: 
-      var: ansible_facts["ansible_all_ipv4_addresses"][1]
+      var: ansible_facts["ansible_all_ipv4_addresses"][0]
     
