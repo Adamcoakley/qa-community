@@ -2,7 +2,8 @@
   become: true
   vars:                                                               
     path_to_nginx_conf: "./nginx.conf"                                
-    nginx_message: "Hello from Ansible on {{ inventory_hostname }}"   
+    nginx_message: "Hello from Ansible on {{ inventory_hostname }}"  
+  tasks: 
   # Task 1: Install nginx
   - name: Install NGINX
     apt:
