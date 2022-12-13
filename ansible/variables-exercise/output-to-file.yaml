@@ -5,7 +5,8 @@
   become: true
   tasks:
   # Task 1: Get the host IP address
-  - name: Print hostvars
+  - name: Print IP Address
     debug: 
-      msg: "{{ hostvars }}" 
+      var: ansible_facts["ansible_all_ipv4_addresses"][1]
+      msg: "{{ var }}"
     
