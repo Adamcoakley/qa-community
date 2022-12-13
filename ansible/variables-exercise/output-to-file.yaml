@@ -8,5 +8,4 @@
   - name: Print IP Address
     debug: 
       var: ansible_facts["ansible_all_ipv4_addresses"][1]
-      msg: "{{ var }}"
     
