@@ -5,9 +5,10 @@
   become: true
   vars:
     os: "{{ ansible_distribution }}"
+    ubuntu: Ubuntu
   tasks:
   # Task 1: Print a message to the console
   - name: Print OS name to console
     debug:
       msg: "{{os}}"
-    when: os == Ubuntu
+    when: os == ubuntu
