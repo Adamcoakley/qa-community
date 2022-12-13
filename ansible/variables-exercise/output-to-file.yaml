@@ -4,7 +4,7 @@
   connection: local
   become: true
   vars:
-    ip_address: "{{inventory_hostname}}"
+    ip_address: "{{ ansible_facts[ansible_all_ipv4_addresses][0] }}"
   tasks:
   # Task 1: Create an empty file
   - name: Create an empty file
@@ -12,5 +12,3 @@
       dest: "/home/file.txt"
       content: |
         {{ip_address}}
-    
-    
