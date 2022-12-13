@@ -7,8 +7,7 @@
     os: "{{ ansible_distribution }}"
   tasks:
   # Task 1: Print a message to the console
-  - name: Create an empty file
-    copy:
-      dest: "/home/file2.txt"
-      content: |
-        {{os}}
+  - name: Print OS name to console
+    debug:
+      msg: "{{os}}"
+    when: "{{os}}" == Ubuntu
