@@ -1,1 +1,14 @@
 # Exercise: Use facts to get a playbook to print a message on the console, only if the OS is Ubuntu.
+
+- hosts: localhost
+  connection: local
+  become: true
+  vars:
+    os: "{{ ansible_distribution }}"
+  tasks:
+  # Task 1: Print a message to the console
+  - name: Create an empty file
+    copy:
+      dest: "/home/file2.txt"
+      content: |
+        {{os}}
