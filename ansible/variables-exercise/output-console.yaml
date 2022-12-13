@@ -10,4 +10,4 @@
   - name: Print OS name to console
     debug:
       msg: "{{os}}"
-    when: "{{os}}" == Ubuntu
+    when: os == Ubuntu
