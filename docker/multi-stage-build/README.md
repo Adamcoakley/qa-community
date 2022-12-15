@@ -23,4 +23,32 @@ They are most commonly used for compiled languages, such as Java.
                 └── index.html
 ```       
 
-## 
+## Commands
+1) Build the image
+``` 
+docker build -t spring-hello-world .
+```
+
+2) Start the container
+```
+docker run -d -p 8080:8080 --name spring-app spring-hello-world
+```
+
+3) View the output from the webserver
+```
+curl localhost:8080 
+```
+
+## Output 
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Java Spring Boot Server</title>
+</head>
+<body>
+    Hello from Docker
+</body>
+</html>
+```
