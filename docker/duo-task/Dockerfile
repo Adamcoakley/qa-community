@@ -2,7 +2,7 @@
 FROM python:3.6
 WORKDIR /duo-task
 # Copy contents into image
- COPY . .
+ COPY app.py .
 # Install pip dependencies from requirements
 RUN pip install -r requirements.txt
 # Set YOUR_NAME environment variable
