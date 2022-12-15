@@ -130,3 +130,6 @@ dmypy.json
 
 # sqlite db files
 *.db
+
+# DS Store files
+.DS_Store
