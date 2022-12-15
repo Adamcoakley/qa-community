@@ -8,4 +8,4 @@ WORKDIR /trio-task
 # Expose correct port
 EXPOSE 5000
 # Create an entrypoint
-ENTRYPOINT ["python", "app.y"]
+ENTRYPOINT ["python", "app.py"]
